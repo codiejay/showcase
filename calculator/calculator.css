@@ -1,0 +1,135 @@
+.calculatorBody
+{
+    width: 60%;
+    margin: 0 auto;
+    /* margin-top: 10%; */
+    /* border: 6px solid#515A5A; */
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px 6px #515A5A
+   
+}
+
+body
+{
+    position: relative;
+}
+
+*
+{
+    box-sizing: border-box
+}
+
+.screen
+{
+    height: 10vh;
+    background-color: #D5DBDB  ;
+    margin:1em auto;
+    width: 90%;
+    border-radius: 15px;
+    text-align: right;
+    position: relative
+}
+
+ul li
+{
+    color: #515A5A;
+    font-size: 1.9em;
+    list-style-type: none;
+    float: left;
+    width: 30%;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background-color: #ABB2B9;
+   
+    border: 1px solid black;
+    margin: 3.2px;
+    border-radius: 6px
+
+}
+
+.equal
+{
+    color: #515A5A;
+    font-size: 1.9em;
+    list-style-type: none;
+    float: left;
+    width: 94%;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background-color: #ABB2B9;
+   
+    border: 1px solid black;
+    margin: 1.2em auto;
+    border-radius: 6px
+
+}
+
+.clearfix::after
+{
+    clear: both;
+    display: block;
+    visibility: hidden;
+    content: "";
+
+}
+
+
+.screen
+{
+    color: black;
+    font-size: 2.1em
+}
+
+.screenShow
+{
+    background-color: rgba(230, 146, 146, 0.795);
+    position: absolute;
+    top:50%;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: white;
+    
+}
+
+.result
+{
+    font-size: 2em;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Media query for smaller screens for  responsiveness.. Note:: This is temp. */
+
+@media(Max-width: 500px)
+{
+    .calculatorBody
+{
+    width: 100%;
+    margin: 0 auto;
+    /* margin-top: 10%; */
+    /* border: 6px solid#515A5A; */
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px 6px #515A5A
+   
+}
+.screen
+{
+    height: 10vh;
+    background-color: #D5DBDB  ;
+    margin:0em auto;
+    width: 90%;
+    border-radius: 15px;
+    text-align: right;
+    position: relative
+}
+}

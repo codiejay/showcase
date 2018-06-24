@@ -1,0 +1,271 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* backface-visibility: hidden */;
+    
+
+}
+
+body
+{
+    padding: 30px;
+    font-family: "Lato", sans-serif;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+      
+
+}
+
+.header
+{
+    height: 95vh;
+    margin: 0 auto;
+    background-image: linear-gradient(to right bottom,  #7ed56fd3,  #28b485d3),url("../img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100% );
+    
+}
+
+.logobox
+{
+position: absolute;
+top: 80px;
+left: 80px;
+animation: rotateicon 3s 4;
+
+}
+
+.logo
+{
+  height: 2em;
+
+}
+
+.heading-primary
+{
+    color: white
+}
+
+.heading-primary-main
+{
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    display: block;
+    animation: movefromleft 2.8s;
+ 
+
+}
+
+.heading-primary-sub
+{
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 0.7em;
+    animation:  movefromleft 1.9s ;
+    margin-bottom: 3em;
+   
+}
+
+.text-box
+{
+    position: absolute;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center
+   
+}
+
+
+
+
+.btn:link,
+.btn:visited
+{
+    text-decoration: none;
+    display: inline-block;
+    padding:  12px 20px;
+    color: rgb(75, 72, 72);
+    border-radius: 22px;
+    transition: all .3s  ;
+    position: relative;
+  
+    
+    
+}
+
+.btnWhite
+{
+    background-color: #fff;
+    font: "Lato";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.897);
+    animation: movebotton 2s;
+    transition: 1s;
+    
+    
+}
+
+.btn:hover 
+{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px#00000065;
+
+}
+
+.btn:active
+{
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px#00000065;
+}
+
+.btnWhite::after
+{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    border-radius: inherit;
+    transition: 0.6s;
+}
+
+
+.btnWhite:hover::after
+{
+transform: scaleX(1.3) scaleY(1.5);
+opacity: 0;
+}
+
+
+
+
+
+/* Animations */
+@keyframes movefromleft
+{
+    0%
+    {
+        transform: translateX(100px) 
+    }
+
+    20%
+    {
+        transform: translateX(-10px) 
+    }
+
+    40%
+    {
+        transform: translateX(10px) 
+    }
+
+    60%
+    {
+        transform: translateX(-10px) 
+    }
+
+    80%
+    {
+        transform: translateX(10px) 
+    }
+
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+
+@keyframes  movebotton
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(300px)
+        
+    }
+
+    20%
+    {
+        opacity: 0;
+        transform: translateY(100px)
+        
+    }
+
+    40%
+    {
+        opacity: 0;
+        transform: translateY(50px)
+        
+    }
+
+    60%
+    {
+        opacity: 0;
+        transform: translateY(40px)
+        
+    }
+    
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes  moveRight
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-170%);
+        color: rgba(116, 35, 197, 0.349)
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes rotateicon
+{
+
+    0%
+    {
+        transform: rotateX(260deg)
+    }
+    10%
+    {
+        transform: rotateX(200deg)
+    }
+
+    20%
+    {
+        transform: rotateX(180deg)
+    }
+
+    100%
+    {
+        transform: rotateX(0deg)
+    }
+}
